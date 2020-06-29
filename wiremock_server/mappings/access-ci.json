@@ -1,0 +1,19 @@
+{
+  "id": "e440e796-43a4-499e-bbb9-a9a167619cfd",
+  "name": "access-ci",
+  "request": {
+    "url": "/ci/access",
+    "method": "GET",
+    "bodyPatterns" : [ {
+      "equalToJson" : { "name": "Anneke" }
+    } ]
+
+  },
+  "response": {
+    "status": 200,
+    "body": "{\"access_code\":\"123ABC\"}",
+    "headers": {
+      "CONTENT-TYPE": "Application/json"
+    }
+  }
+}
