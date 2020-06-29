@@ -1,0 +1,54 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Ejemplos de test E2E para una API - EndPoint Ping",
+    "line": 2,
+    "id": "ejemplos-de-test-e2e-para-una-api---endpoint-ping",
+    "tags": [],
+    "uri": "tests/features/menu/pingTests.feature",
+    "elements": [
+      {
+        "id": "ejemplos-de-test-e2e-para-una-api---endpoint-ping;verify-that-the-server-is-running",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "Verify that the server is running",
+        "tags": [
+          {
+            "name": "@sanity",
+            "line": 4
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "a ping request is sent",
+            "match": {
+              "location": "tests/steps/pingTestsSteps.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 25000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "The status code is 201",
+            "match": {
+              "location": "tests/steps/commonSteps.js:6"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 1000000,
+              "error_message": "AssertionError: Wrong Status Code: expected 200 to equal 201\n    + expected - actual\n\n    -200\n    +201\n\n    at CustomWorld.<anonymous> (/home/mardiles/Documents/Repositories/api-workshop-sparkdigital/tests/steps/commonSteps.js:7:10)"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

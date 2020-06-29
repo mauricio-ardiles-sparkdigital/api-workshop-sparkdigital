@@ -12,5 +12,11 @@
     "jest": "^26.0.1",
     "sync-request": "^6.1.0",
     "xml-js": "^1.6.11"
+  },
+  "scripts": {
+    "test:all": "./node_modules/.bin/cucumber-js tests/features/**/*.feature -r tests/steps --format json:tests/reports/cucumber_report.json",
+    "test:create:report": "node tests/configurations/index.js",
+    "test:lint": "eslint 'tests/**/*.js'",
+    "test:unit": "jest"
   }
 }
