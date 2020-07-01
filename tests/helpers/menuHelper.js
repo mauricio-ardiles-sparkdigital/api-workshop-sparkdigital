@@ -39,7 +39,7 @@ function checkMenuVodQuality(userRights, vod_genre) {
         vodGenre.vods.forEach(function (vod) {
             const result = findAccessRight(vod.quality, userRights);
             if (!result) {
-                failedArray.push( `Genre ${vodGenre.genre} , VOD ${vod.title} has an unsuported Quality ${vod.quality}`);
+                failedArray.push( `Genre ${vodGenre.genre} , VOD ${vod.title} has an unsupported Quality ${vod.quality}`);
             }
         });
     });

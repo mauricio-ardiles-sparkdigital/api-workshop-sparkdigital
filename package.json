@@ -17,6 +17,6 @@
     "test:all": "./node_modules/.bin/cucumber-js tests/features/**/*.feature -r tests/steps --format json:tests/reports/cucumber_report.json",
     "test:create:report": "node tests/configurations/index.js",
     "test:lint": "eslint 'tests/**/*.js'",
-    "test:unit": "jest"
+    "test:unit": "jest --coverage"
   }
 }

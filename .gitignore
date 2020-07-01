@@ -10,3 +10,4 @@ gen
 /node_modules/
 /tests/reports/*.json
 /tests/reports/*.html
+/coverage/
