@@ -3,7 +3,7 @@
   "name": "access",
   "request": {
     "url": "/local/access",
-    "method": "GET",
+    "method": "POST",
     "bodyPatterns" : [ {
       "equalToJson" : { "name": "Anneke" }
     } ]

@@ -41,4 +41,4 @@ echo "-----------------------------------------------"
 
 echo "Setting wiremock in port: 9999"
 chmod +x wiremock.jar
-java -jar wiremock.jar --port 9999
+java -jar wiremock.jar --port 9999 --verbose

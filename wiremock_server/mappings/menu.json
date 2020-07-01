@@ -2,16 +2,12 @@
   "id": "e440e796-43a4-499e-bbb9-a9a167619cfd",
   "name": "menu",
   "request": {
-    "url": "/local/menu",
-    "method": "GET",
-    "bodyPatterns" : [ {
-      "equalToJson" : { "access_code": "123ABR" }
-    } ]
-
+    "url": "/local/menu/123ABC",
+    "method": "GET"
   },
   "response": {
     "status": 200,
-    "body": "{\"user_name\":\"Anneke\",\"country_name\":\"Argentina\",\"access_rights\":[\"HD\",\"fullHD\",\"4K\"], \"vod_genre\":[{\"genre\":\"Anime\",\"titles\":[{\"title\":\"Attack on Titan\",\"quality\":\"HD\"},{\"title\":\"Deadman Wonderland\",\"quality\":\"4K\"}]},{\"genre\":\"Action\",\"titles\":[{\"title\":\"Rambo\",\"quality\":\"HD\"}]},{\"genre\":\"SCI-FI\",\"titles\":[{\"title\":\"Sharknado\",\"quality\":\"8K\"},{\"title\":\"Lavalantula\",\"quality\":\"fullHD\"}]},],}",
+    "body": "{\"user_name\":\"Anneke\",\"country_name\":\"Argentina\",\"access_rights\":[\"HD\",\"fullHD\",\"4K\"], \"vod_genre\":[{\"genre\":\"Anime\",\"titles\":[{\"title\":\"Attack on Titan\",\"quality\":\"HD\"},{\"title\":\"Deadman Wonderland\",\"quality\":\"4K\"}]},{\"genre\":\"Action\",\"titles\":[{\"title\":\"Rambo\",\"quality\":\"HD\"}]},{\"genre\":\"SCI-FI\",\"titles\":[{\"title\":\"Sharknado\",\"quality\":\"8K\"},{\"title\":\"Lavalantula\",\"quality\":\"fullHD\"}]}]}",
     "headers": {
       "CONTENT-TYPE": "Application/json"
     }

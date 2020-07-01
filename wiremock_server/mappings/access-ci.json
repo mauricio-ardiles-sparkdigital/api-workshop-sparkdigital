@@ -3,7 +3,7 @@
   "name": "access-ci",
   "request": {
     "url": "/ci/access",
-    "method": "GET",
+    "method": "POST",
     "bodyPatterns" : [ {
       "equalToJson" : { "name": "Anneke" }
     } ]

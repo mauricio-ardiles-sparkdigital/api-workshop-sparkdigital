@@ -1,11 +1,101 @@
 [
   {
     "keyword": "Feature",
+    "name": "Ejemplos de test E2E para una API - EndPoint Menu",
+    "line": 2,
+    "id": "ejemplos-de-test-e2e-para-una-api---endpoint-menu",
+    "tags": [],
+    "uri": "tests/features/ping/menuTests.feature",
+    "elements": [
+      {
+        "id": "ejemplos-de-test-e2e-para-una-api---endpoint-menu;verify-that-the-user-anneke-has-the-correct-'vod-access-rights'",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "Verify that the user Anneke has the correct 'VOD Access Rights'",
+        "tags": [
+          {
+            "name": "@menu",
+            "line": 4
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "User Anneke request an access code",
+            "match": {
+              "location": "tests/steps/accessTestsSteps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 155000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "The status code is 200",
+            "match": {
+              "location": "tests/steps/commonSteps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "User goes to the menu using its access code",
+            "match": {
+              "location": "tests/steps/menuTestsSteps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "The status code is 200",
+            "match": {
+              "location": "tests/steps/commonSteps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "Its vod access rights are HD,fullHD,4K",
+            "match": {
+              "location": "tests/steps/menuTestsSteps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
     "name": "Ejemplos de test E2E para una API - EndPoint Ping",
     "line": 2,
     "id": "ejemplos-de-test-e2e-para-una-api---endpoint-ping",
     "tags": [],
-    "uri": "tests/features/menu/pingTests.feature",
+    "uri": "tests/features/ping/pingTests.feature",
     "elements": [
       {
         "id": "ejemplos-de-test-e2e-para-una-api---endpoint-ping;verify-that-the-server-is-running",
@@ -15,6 +105,10 @@
         "tags": [
           {
             "name": "@sanity",
+            "line": 4
+          },
+          {
+            "name": "@ping",
             "line": 4
           }
         ],
@@ -26,25 +120,37 @@
             "line": 6,
             "name": "a ping request is sent",
             "match": {
-              "location": "tests/steps/pingTestsSteps.js:7"
+              "location": "tests/steps/pingTestsSteps.js:9"
             },
             "result": {
               "status": "passed",
-              "duration": 25000000
+              "duration": 15000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 7,
-            "name": "The status code is 201",
+            "name": "The status code is 200",
             "match": {
               "location": "tests/steps/commonSteps.js:6"
             },
             "result": {
-              "status": "failed",
-              "duration": 1000000,
-              "error_message": "AssertionError: Wrong Status Code: expected 200 to equal 201\n    + expected - actual\n\n    -200\n    +201\n\n    at CustomWorld.<anonymous> (/home/mardiles/Documents/Repositories/api-workshop-sparkdigital/tests/steps/commonSteps.js:7:10)"
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "The ping response message is \"Hello SparkDigital\"",
+            "match": {
+              "location": "tests/steps/pingTestsSteps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
             }
           }
         ]

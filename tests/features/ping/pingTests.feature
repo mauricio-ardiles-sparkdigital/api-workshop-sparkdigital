@@ -5,4 +5,4 @@ Feature: Ejemplos de test E2E para una API - EndPoint Ping
   Scenario: Verify that the server is running
     When a ping request is sent
     Then The status code is 200
-
+    And The ping response message is "Hello SparkDigital"

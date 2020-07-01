@@ -7,5 +7,6 @@
 *.iml
 out
 gen
-/wiremock_server/wiremock.jar
 /node_modules/
+/tests/reports/*.json
+/tests/reports/*.html
