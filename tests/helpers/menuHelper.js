@@ -12,15 +12,42 @@ function getMenuByAccessCodeRequest(url, accessCode) {
 }
 
 
-function findAccessRight(userRight, userAccessRights) {
+/**
+ * Checks if a given quality is includes in the user access rights
+ * @param qualityRight
+ * @param userAccessRights
+ * @returns {boolean}
+ */
+function findAccessRight(qualityRight, userAccessRights) {
     const result = userAccessRights.find(function (userAccessRight) {
-        return userAccessRight === userRight;
+        return userAccessRight === qualityRight;
     });
 
     return result != null;
 }
 
+
+/**
+ * Checks if a given array of VODs have the right quality for user access rights
+ * @param userRights
+ * @param vod_genre
+ * @returns {{messages: [], status: boolean}}
+ */
+function checkMenuVodQuality(userRights, vod_genre) {
+    let failedArray = [];
+    vod_genre.forEach(function (vodGenre) {
+        vodGenre.vods.forEach(function (vod) {
+            const result = findAccessRight(vod.quality, userRights);
+            if (!result) {
+                failedArray.push( `Genre ${vodGenre.genre} , VOD ${vod.title} has an unsuported Quality ${vod.quality}`);
+            }
+        });
+    });
+    return {'status':failedArray.length === 0, 'messages' : failedArray};
+}
+
 module.exports = {
     getMenuByAccessCodeRequest,
     findAccessRight,
+    checkMenuVodQuality,
 }

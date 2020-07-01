@@ -7,7 +7,7 @@
   },
   "response": {
     "status": 200,
-    "body": "{\"user_name\":\"Anneke\",\"country_name\":\"Argentina\",\"access_rights\":[\"HD\",\"fullHD\",\"4K\"], \"vod_genre\":[{\"genre\":\"Anime\",\"titles\":[{\"title\":\"Attack on Titan\",\"quality\":\"HD\"},{\"title\":\"Deadman Wonderland\",\"quality\":\"4K\"}]},{\"genre\":\"Action\",\"titles\":[{\"title\":\"Rambo\",\"quality\":\"HD\"}]},{\"genre\":\"SCI-FI\",\"titles\":[{\"title\":\"Sharknado\",\"quality\":\"8K\"},{\"title\":\"Lavalantula\",\"quality\":\"fullHD\"}]}]}",
+    "body": "{\"user_name\":\"Anneke\",\"country_name\":\"Argentina\",\"access_rights\":[\"HD\",\"fullHD\",\"4K\"], \"vod_genre\":[{\"genre\":\"Anime\",\"vods\":[{\"title\":\"Attack on Titan\",\"quality\":\"HD\"},{\"title\":\"Deadman Wonderland\",\"quality\":\"4K\"}]},{\"genre\":\"Action\",\"vods\":[{\"title\":\"Rambo\",\"quality\":\"HD\"}]},{\"genre\":\"SCI-FI\",\"vods\":[{\"title\":\"Sharknado\",\"quality\":\"8K\"},{\"title\":\"Lavalantula\",\"quality\":\"fullHD\"}]}]}",
     "headers": {
       "CONTENT-TYPE": "Application/json"
     }

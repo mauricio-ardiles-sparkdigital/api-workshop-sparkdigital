@@ -21,3 +21,13 @@ Then(/^Its vod access rights are (.*)$/, function (accessRights) {
         assert.isTrue(hasRight, `Missing Access Right ${accessRight}`);
     });
 });
+
+Then(/^The menu includes only VOD for the user's access right$/, function () {
+    const userRights = this.getServiceResponse().access_rights;
+    const vodGenreResponse = this.getServiceResponse().vod_genre;
+    console.log(userRights);
+    console.log(vodGenreResponse);
+
+    const result = menuHelper.checkMenuVodQuality(userRights, vodGenreResponse)
+    assert.isTrue(result.status, result.messages);
+});
