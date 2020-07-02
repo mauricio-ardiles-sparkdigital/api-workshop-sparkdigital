@@ -6,6 +6,7 @@ const {Then} = require('cucumber');
 const { assert } = require('chai');
 
 When(/^User goes to the menu using its access code$/, function () {
+    console.log(`Environment: ${commonHelper.getTestEnvironment()}`);
     const accessCode = this.getServiceResponse().access_code;
     const url = testConfigurations.endPoints[commonHelper.getTestEnvironment()].urls['menu'];
     const response = menuHelper.getMenuByAccessCodeRequest(url, accessCode);
@@ -25,9 +26,6 @@ Then(/^Its vod access rights are (.*)$/, function (accessRights) {
 Then(/^The menu includes only VOD for the user's access right$/, function () {
     const userRights = this.getServiceResponse().access_rights;
     const vodGenreResponse = this.getServiceResponse().vod_genre;
-    console.log(userRights);
-    console.log(vodGenreResponse);
-
     const result = menuHelper.checkMenuVodQuality(userRights, vodGenreResponse)
     assert.isTrue(result.status, result.messages);
 });

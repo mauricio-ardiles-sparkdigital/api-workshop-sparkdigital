@@ -7,6 +7,7 @@ const { assert } = require('chai');
 
 
 When(/^a ping request is sent$/, function () {
+    console.log(`Environment: ${commonHelper.getTestEnvironment()}`);
     const url = testConfigurations.endPoints[commonHelper.getTestEnvironment()].urls['ping'];
     const response = pingHelper.getPingRequest(url);
     this.setServiceStatusCodeTo(response.statusCode);

@@ -1,7 +1,7 @@
 # Created by mardiles at 30/6/20
 Feature: Ejemplos de test E2E para una API - EndPoint Menu
 
-  @menu
+  @menu @regression
   Scenario Outline: Verify that the user <userName> has the correct 'VOD Access Rights'
     Given User <userName> requests an access code
     When User goes to the menu using its access code
@@ -14,7 +14,7 @@ Feature: Ejemplos de test E2E para una API - EndPoint Menu
     |Anneke  | 200      |HD,fullHD,4K|
 
 
-   @menu
+   @menu @regression
    Scenario: Verify that the menu is showing only VODs for the user access rights
      Given User Anneke requests an access code
      When User goes to the menu using its access code

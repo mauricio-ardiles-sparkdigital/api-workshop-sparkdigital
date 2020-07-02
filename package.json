@@ -1,15 +1,18 @@
 {
   "name": "api-workshop-sparkdigital",
   "version": "1.0.0",
-  "dependencies": {},
+  "dependencies": {
+  },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
     "cucumber": "^6.0.5",
     "cucumber-html-reporter": "^5.2.0",
     "eslint": "^7.0.0",
     "eslint-plugin-import": "^2.20.2",
     "jest": "^26.0.1",
+    "mocha": "^8.0.1",
     "sync-request": "^6.1.0",
     "xml-js": "^1.6.11"
   },
@@ -17,6 +20,8 @@
     "test:all": "./node_modules/.bin/cucumber-js tests/features/**/*.feature -r tests/steps --format json:tests/reports/cucumber_report.json",
     "test:create:report": "node tests/configurations/index.js",
     "test:lint": "eslint 'tests/**/*.js'",
+    "test:regression": "./node_modules/.bin/cucumber-js tests/features/**/*.feature -r tests/steps --tags '@regression' --format json:tests/reports/cucumber_report.json",
+    "test:sanity": "./node_modules/.bin/cucumber-js tests/features/**/*.feature -r tests/steps --tags '@sanity' --format json:tests/reports/cucumber_report.json",
     "test:unit": "jest --coverage"
   }
 }
