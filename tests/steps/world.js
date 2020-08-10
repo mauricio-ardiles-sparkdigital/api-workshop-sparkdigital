@@ -2,26 +2,26 @@
 const { setWorldConstructor } = require('cucumber');
 
 class CustomWorld {
-  constructor() {
-    this.statusCode = 0;
-    this.serviceResponse = '';
-  }
+    constructor() {
+        this.statusCode = 0;
+        this.serviceResponse = '';
+    }
 
-  getServiceStatusCode() {
-    return this.statusCode;
-  }
+    getServiceStatusCode() {
+        return this.statusCode;
+    }
 
-  setServiceStatusCodeTo(status) {
-    this.statusCode = status;
-  }
+    setServiceStatusCodeTo(status) {
+        this.statusCode = status;
+    }
 
-  getServiceResponse() {
-    return this.serviceResponse;
-  }
+    getServiceResponse() {
+        return this.serviceResponse;
+    }
 
-  setServiceResponse(response) {
-    this.serviceResponse = response;
-  }
+    setServiceResponse(response) {
+        this.serviceResponse = response;
+    }
 }
 
 setWorldConstructor(CustomWorld);

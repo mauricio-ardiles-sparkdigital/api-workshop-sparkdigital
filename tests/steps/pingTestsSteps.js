@@ -5,7 +5,6 @@ const pingHelper = require('../helpers/pingHelper');
 const {Then} = require('cucumber');
 const { assert } = require('chai');
 
-
 When(/^a ping request is sent$/, function () {
     console.log(`Environment: ${commonHelper.getTestEnvironment()}`);
     const url = testConfigurations.endPoints[commonHelper.getTestEnvironment()].urls['ping'];

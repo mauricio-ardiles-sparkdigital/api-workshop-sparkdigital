@@ -1,6 +1,5 @@
 const requestSync = require('sync-request');
 
-
 /**
  * Returns the menu for a given Access Code
  * @param {string} url
@@ -50,4 +49,4 @@ module.exports = {
     getMenuByAccessCodeRequest,
     findAccessRight,
     checkMenuVodQuality,
-}
+};

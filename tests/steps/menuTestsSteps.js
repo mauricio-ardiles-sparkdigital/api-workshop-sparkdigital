@@ -15,7 +15,7 @@ When(/^User goes to the menu using its access code$/, function () {
 });
 
 Then(/^Its vod access rights are (.*)$/, function (accessRights) {
-    const accessRightsArray = accessRights.split(",");
+    const accessRightsArray = accessRights.split(',');
     const responseAccessRights = this.getServiceResponse().access_rights;
     accessRightsArray.forEach(function (accessRight) {
         const hasRight = menuHelper.findAccessRight(accessRight, responseAccessRights);
@@ -26,6 +26,6 @@ Then(/^Its vod access rights are (.*)$/, function (accessRights) {
 Then(/^The menu includes only VOD for the user's access right$/, function () {
     const userRights = this.getServiceResponse().access_rights;
     const vodGenreResponse = this.getServiceResponse().vod_genre;
-    const result = menuHelper.checkMenuVodQuality(userRights, vodGenreResponse)
+    const result = menuHelper.checkMenuVodQuality(userRights, vodGenreResponse);
     assert.isTrue(result.status, result.messages);
 });

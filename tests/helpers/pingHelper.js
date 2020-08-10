@@ -1,6 +1,5 @@
 const requestSync = require('sync-request');
 
-
 /**
  * Look for an specific actionPlatform
  * @param {string} url
@@ -12,4 +11,4 @@ function getPingRequest(url) {
 
 module.exports = {
     getPingRequest,
-}
+};

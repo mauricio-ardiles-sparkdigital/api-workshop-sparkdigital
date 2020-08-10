@@ -1,6 +1,5 @@
 const requestSync = require('sync-request');
 
-
 /**
  * Returns an access code for a given User
  * Aqui estoy usando un post no un get, porque queria mostrar que se puede enviar un json body
@@ -11,8 +10,7 @@ const requestSync = require('sync-request');
 function getAccessCodeRequest(url, userName) {
     const params = {
         'name': userName
-    }
-
+    };
     const bodyParams = JSON.stringify(params);
 
     return requestSync('POST',url,{
@@ -25,4 +23,4 @@ function getAccessCodeRequest(url, userName) {
 
 module.exports = {
     getAccessCodeRequest,
-}
+};
