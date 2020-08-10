@@ -7,7 +7,7 @@
   },
   "response": {
     "status": 200,
-    "body": "{\"Message\":\"Hello SparkDigital\"}",
+    "body": "{\"message\":\"Hello SparkDigital\"}",
     "headers": {
       "CONTENT-TYPE": "Application/json"
     }
