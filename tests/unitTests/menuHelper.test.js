@@ -14,7 +14,6 @@ test('findAccessRight returns true', () =>{
     expect(result).toBe(true);
 });
 
-
 test('checkMenuVodQuality returns true', () =>{
     const vod_genre =  [
         {
