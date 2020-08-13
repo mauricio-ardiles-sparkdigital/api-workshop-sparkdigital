@@ -1,11 +1,12 @@
 {
   "name": "api-workshop-sparkdigital",
   "jest": {
-    "testPathIgnorePatterns": ["test/"]
+    "testPathIgnorePatterns": [
+      "test/"
+    ]
   },
   "version": "1.0.0",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "chai": "^4.2.0",
